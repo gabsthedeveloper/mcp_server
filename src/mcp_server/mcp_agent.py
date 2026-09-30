@@ -1,10 +1,13 @@
 import asyncio
 import os
 
+from dotenv import load_dotenv
 from pydantic_ai import Agent
 from pydantic_ai.models.ollama import OllamaModel
 from pydantic_ai.providers.ollama import OllamaProvider
 from pydantic_ai.mcp import MCPServerStreamableHTTP
+
+load_dotenv()
 
 
 LLM_URL = os.getenv('LLM_URL')
